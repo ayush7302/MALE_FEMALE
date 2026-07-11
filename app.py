@@ -47,9 +47,9 @@ if uploaded_file is not None:
     probability = model.predict_proba([resized])[0]
 
     if prediction == 0:
-        st.success("🚹 Prediction: male")
-    else:
         st.success("🚺 Prediction: female")
+    else:
+        st.success("🚹 Prediction: male")
 
-    st.write(f"Male Probability : {probability[0]*100:.2f}%")
-    st.write(f"Female Probability : {probability[1]*100:.2f}%")
+    st.write(f"female Probability : {probability[0]*100:.2f}%")
+    st.write(f"Male Probability : {probability[1]*100:.2f}%")
